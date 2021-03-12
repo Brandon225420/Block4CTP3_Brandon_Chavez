@@ -6,6 +6,7 @@ Program goals:
 6. Write a exit option
 
 """
+import random
 myList = []
 
 def mainProgram():
