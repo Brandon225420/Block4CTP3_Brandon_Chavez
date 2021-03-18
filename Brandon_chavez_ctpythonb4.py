@@ -15,24 +15,45 @@ def mainProgram():
         print("Hello , there! Let's work with lists!")
         print("PLease choose from the following options. Type the number of your choice")
         choice = input("""1. Add to a list,
-2. Return a value at a list ,
-3. Random Search
-4 to quit   """)
+2. Return a value at a list
+3. Add a bunch of numbers!
+4. Random Search
+5. print list
+6 to quit   """)
         if choice == "1":
             addToList()
-        elif choice == "2":
+        elif choice == "2": 
             indexValues()
         elif choice == "3":
-                break
+            addabunch()
+        elif choice == "4":
+            randomSearch()
+        elif choice == "5":
+            print(myList)
+        else:
+            break
+        
 def addToList():
     print("Adding to a listt! Great Choice!")
     newItem = input("Type an integer here!  ")
     myList.append(int(newItem))
     #we need to think about errors!
 
+def addabunch():
+    print("we're going to add a bunch of numbers to your list")
+    numToAdd = input("How many new integers do you want to add   ")
+    numRange = input("And how high would you like these numbers to go?  ")
+    for x in range (0, int(numToAdd)):
+        myList.append(randon.randint(0, int(numRange)))
+    print("Your list is complete")
+
 def randomSearch():
     print("bruh, how you doing bruv, im a random search engine")
     print(myList[random.randint(0, len(myList)-1)])
+
+def linearSearch():
+    print("Where going to go through this list one item at a time")
+    
 
 def indexValues():
     print("At what index position do you want to search?")
