@@ -18,8 +18,9 @@ def mainProgram():
 2. Return a value at a list
 3. Add a bunch of numbers!
 4. Random Search
-5. print list
-6 to quit   """)
+5. Linear search
+6. print list
+7. to quit   """)
         if choice == "1":
             addToList()
         elif choice == "2": 
@@ -29,6 +30,8 @@ def mainProgram():
         elif choice == "4":
             randomSearch()
         elif choice == "5":
+            linearSearch()
+        elif choice == "6":
             print(myList)
         else:
             break
@@ -44,7 +47,7 @@ def addabunch():
     numToAdd = input("How many new integers do you want to add   ")
     numRange = input("And how high would you like these numbers to go?  ")
     for x in range (0, int(numToAdd)):
-        myList.append(randon.randint(0, int(numRange)))
+        myList.append(random.randint(0, int(numRange)))
     print("Your list is complete")
 
 def randomSearch():
@@ -53,7 +56,10 @@ def randomSearch():
 
 def linearSearch():
     print("Where going to go through this list one item at a time")
-    
+    SeachValue = input("What are you looking for?  ")
+    for x in range(len(myList)):
+        if myList (x) == int(searchValue):
+            print("Your item is at index position {}".format (8))
 
 def indexValues():
     print("At what index position do you want to search?")
