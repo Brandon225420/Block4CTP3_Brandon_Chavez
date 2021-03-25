@@ -12,7 +12,7 @@ import random
 #this is more like an application, it is used to randomize and we are simply just adding to our code.
 myList = []
 #this wil be our list, we can name it anything we want it to were just goung to name it "myList" for now.
-
+unique_list = []
 #We are going to talk about how indentations work and how they are kind of the hardest part and easiest part of coding. Computers don't really use steps like we
 #normally do they mainly use indentation where if we want to continue a piece code you are going to have to but it a space after the first piece of code, python makes
 #this easier with letting us enter space and will automatically indent for us, if you want to start a new piece of code then you can start back to the start and continue
@@ -31,7 +31,7 @@ def mainProgram():
 3. Add a bunch of numbers!
 4. Random Search
 5. Linear search
-6. print list
+6. sort list
 7. to quit   """)
         #the input option is similar to print in where we enter a certain piece of data and we get something out of it, the input option simply save the data for some
         #other use like when you enter a certain number or letter you get the input value you just said. The data we just put show us will give us all of the options
@@ -61,7 +61,10 @@ def mainProgram():
             #the data set we want to connect to the number 5
         elif choice == "6":
             #the number we want to choose "6"
-            print(myList)
+            sortList(myList)
+        elif choice == "7":
+            printLists()
+            
             #this will print the list we made, it's actually pretty simple, if you type 6 in the shell you will get the data in your list.
         else:
             #else is like the last piece of elif in our data, it will be the last piece of code before it stops the loop.
@@ -95,6 +98,16 @@ def addabunch():#the name of our function
     print("Your list is complete")
     #this will print when the code is done running
 
+def sortList(myList):
+    #"myList"is the ARGUMENT this function take.
+    for x in myList:
+        if x not in unique_list:
+            unique_list.append(x)
+    unique_list.sort()
+    showMe = input("Wanna se your new, sorted list? Y/N")
+    if showMe.lower() =="y":
+        print(unique_list)
+
 def randomSearch():
     print("bruh, how you doing bruv, im a random search engine")
      #this will print the quotes when randomSearch is choosen
@@ -126,6 +139,17 @@ def indexValues():#the name of our function
     myList[random.randint(0, len(myList))]
     #we do a similar thing here but we just add a random.randint and try to search for a value inside the mylist we created.
 
+def printLists():
+    if len(unique_list) == 0:
+        print(myList)
+    else:
+        whichOne = input("which list do you want to see? sorted or unsorted?  ")
+        if whichOne.lower() == "sorted":
+            print(unique_list)
+    
+            
+          
+      
   
 
 
