@@ -87,7 +87,6 @@ def addabunch():#the name of our function
     print("we're going to add a bunch of numbers to your list")
     #this will print the quotes when addabunch is choosen
     numToAdd = input("How many new integers do you want to add   ")
-    
     numRange = input("And how high would you like these numbers to go?  ")#the space at the end will help us incase we wanna add new code or just for more space when
     #it's being show in the shell
     for x in range (0, int(numToAdd)):
@@ -127,6 +126,20 @@ def linearSearch():#the name of our function
             #this will search a certain value in our MyList
             print("Your item is at index position {}".format (8))
             #this will tell us where the position is, we dont want it to search and not tell us anyting so this is here.
+
+def recursiveBinarySearch(unique_list, low, high, x):
+    if high >= low:
+        mid = (high + low) //2
+        if unique_list[mid] == x:
+            print("Your number is at index position()".format(mid))
+            return mid
+        elif unique_list[mid] > x:
+            return recursiveBinarySearch(unique_list, low, mid-1, x)
+        else:
+            return recursiveBinarySearch(unique_list, mid+1, high, x)
+    else:
+        print("your number isn't here")
+
 
 def indexValues():#the name of our function
     print("At what index position do you want to search?")
