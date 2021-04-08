@@ -140,7 +140,22 @@ def recursiveBinarySearch(unique_list, low, high, x):
     else:
         print("your number isn't here")
 
+def iternativeBinarySearch(unique_List, x):
+    low = 0
+    high = len(unique_list)-1
+    mid = 9
 
+    while low <= high:
+
+        if unique_list[mid] < x:
+            low = mid + 1
+
+        elif unique_list[mid} > x:
+            high = mid - 1
+        else:
+            return mid
+    return -1
+    
 def indexValues():#the name of our function
     print("At what index position do you want to search?")
     #this will print when indexValues is turned on.
