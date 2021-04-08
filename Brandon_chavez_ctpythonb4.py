@@ -32,7 +32,9 @@ def mainProgram():
 4. Random Search
 5. Linear search
 6. sort list
-7. to quit   """)
+7. print list
+8. Recursive Binary Search
+9. to quit   """)
         #the input option is similar to print in where we enter a certain piece of data and we get something out of it, the input option simply save the data for some
         #other use like when you enter a certain number or letter you get the input value you just said. The data we just put show us will give us all of the options
         #we will have in our disposal, like if you want to 1, 2 or 3 you just have to type it in
@@ -64,6 +66,11 @@ def mainProgram():
             sortList(myList)
         elif choice == "7":
             printLists()
+        elif choice == "8":
+            searchItem = input("What are you looking for?   ")
+            recursiveBinarySearch(unique_list, 0, len(unique_list)-1, int(searchItem))
+            
+        
             
             #this will print the list we made, it's actually pretty simple, if you type 6 in the shell you will get the data in your list.
         else:
@@ -140,21 +147,23 @@ def recursiveBinarySearch(unique_list, low, high, x):
     else:
         print("your number isn't here")
 
-def iternativeBinarySearch(unique_List, x):
+def iterativeBinarySearch(unique_list, x):
     low = 0
     high = len(unique_list)-1
-    mid = 9
+    mid = 0
 
-    while low <= high:
+    while low<- high:
+        mid = (high + low) // 2
 
         if unique_list[mid] < x:
             low = mid + 1
-
-        elif unique_list[mid} > x:
+        elif unique_list[mid] > x:
             high = mid - 1
         else:
             return mid
     return -1
+    
+    
     
 def indexValues():#the name of our function
     print("At what index position do you want to search?")
