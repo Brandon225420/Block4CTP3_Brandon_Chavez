@@ -10,6 +10,7 @@ Program goals:
 #these are our program goals, the quotes at the start and end are so the goals don't interfere with the code.
 import random
 #this is more like an application, it is used to randomize and we are simply just adding to our code.
+import emoji
 myList = []
 #this wil be our list, we can name it anything we want it to were just goung to name it "myList" for now.
 unique_list = []
@@ -34,7 +35,9 @@ def mainProgram():
 6. sort list
 7. print list
 8. Recursive Binary Search
-9. to quit   """)
+9. Iterative Binary Search
+10. Emoji
+11. to quit   """)
         #the input option is similar to print in where we enter a certain piece of data and we get something out of it, the input option simply save the data for some
         #other use like when you enter a certain number or letter you get the input value you just said. The data we just put show us will give us all of the options
         #we will have in our disposal, like if you want to 1, 2 or 3 you just have to type it in
@@ -69,6 +72,11 @@ def mainProgram():
         elif choice == "8":
             searchItem = input("What are you looking for?   ")
             recursiveBinarySearch(unique_list, 0, len(unique_list)-1, int(searchItem))
+        elif choice == "9":
+            searchItem = input("What are you looking for   ")
+            iterativeBinarySearch(unique_list, 0, len(unique_list)-1, int(searchItem))
+        elif choice == "10":
+            emojiCreator()
             
         
             
@@ -147,6 +155,7 @@ def recursiveBinarySearch(unique_list, low, high, x):
     else:
         print("your number isn't here")
 
+
 def iterativeBinarySearch(unique_list, x):
     low = 0
     high = len(unique_list)-1
@@ -162,9 +171,37 @@ def iterativeBinarySearch(unique_list, x):
         else:
             return mid
     return -1
+
+
+#def AddEmojiToList():
+    #print("Wow adding new emoji cool!")
+    #newEmoji = input("Type what emoji you wantz")
+    
+
+def emojiCreator():
+    choice = input("which emoji you want boi?")
+    if choice == "1":
+       print(emoji.emojize(":star:"))
+    elif choice == "2":
+       print(emoji.emojize(":heart:"))
+    elif choice == "3":
+       print(emoji.emojize(":rage:"))
+    elif choice == "4":
+       print(emoji.emojize(":poop:"))
+    elif choice == "5":
+       print(emoji.emojize(":snake:"))
+       
+ 
     
     
-    
+"""
+Function Explanation: we created a variable called indexPos, and stored
+the resuolt of and in input function inside it.
+
+We then force the value stored in the indexPos into an integer (using the int () function)
+and used that variable to call a value at a specific index position.
+
+"""
 def indexValues():#the name of our function
     print("At what index position do you want to search?")
     #this will print when indexValues is turned on.
@@ -175,6 +212,13 @@ def indexValues():#the name of our function
     #position of your choosing. 
     myList[random.randint(0, len(myList))]
     #we do a similar thing here but we just add a random.randint and try to search for a value inside the mylist we created.
+
+"""
+
+ 
+
+"""
+
 
 def printLists():
     if len(unique_list) == 0:
