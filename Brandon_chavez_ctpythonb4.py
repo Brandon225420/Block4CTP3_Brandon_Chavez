@@ -85,10 +85,14 @@ def mainProgram():
             #else is like the last piece of elif in our data, it will be the last piece of code before it stops the loop.
             break
         #this will break the loop from repeating every time.
-        
+"""
+We created a fucntion called addToList, this function will allow us to create/add new numbers or or values into our list.
+input newItem will alow us our code to ask us which code value we want.
+
+
+"""
 def addToList():
     #this is the name of the code we will make, we typed this above we're our numbers are!, we are using def instead of elif, def is short for define, it will define
-    #the addToList we just made.
     print("Adding to a list! Great Choice!")
     #this will print the quotes when addTOlist is choosen
     newItem = input("Type an integer here!  ")
@@ -97,6 +101,15 @@ def addToList():
     #Append here is used to create, some of this code might seem complicated but it's more like steps we the code will do for us, for example mylist.append will
     #create a data set into(newItem) the int at the start will convert the integer into data set that will fit MyList. 
     #we need to think about errors!
+
+"""
+This function will allow us to enter a certain amount of values into our code from highest to lowest, for example
+numToAdd will allow us to enter the amount of integers we would like
+numRange will allow us to enter how high our value will be
+for example: if we choose 100 for numToAdd it will give us that amount of values. If we put 1000 for numRange we will get a number about that high.
+
+
+"""
 
 def addabunch():#the name of our function
     print("we're going to add a bunch of numbers to your list")
@@ -112,6 +125,14 @@ def addabunch():#the name of our function
     print("Your list is complete")
     #this will print when the code is done running
 
+"""
+This function will allows us to sort what we have in our list already, for example if we wanted we could sort different strings, integers, booleans to
+different tabs of sorts. The code works in that we code will call a value one by one and check which type of value they are and sort them into the right
+value. 
+
+
+"""
+
 def sortList(myList):
     #"myList"is the ARGUMENT this function take.
     for x in myList:
@@ -122,6 +143,13 @@ def sortList(myList):
     if showMe.lower() =="y":
         print(unique_list)
 
+
+"""
+This function will allow us randomly search for a value in our list. We activate the code and it will randomly choose a value from our list, it does this by choosing
+a value between 0 and the selected value we choose.
+
+"""
+
 def randomSearch():
     print("bruh, how you doing bruv, im a random search engine")
      #this will print the quotes when randomSearch is choosen
@@ -129,6 +157,12 @@ def randomSearch():
     #the line of code is again similar to like steps, print myList will then do a random search, len is similar to int in where it will convert the data into another
     #thing, this time the len will turn it into a string then add the data set you want to add or change and the -1 is really only used because computers like using
     #01234 instead of the normal 1234 we use.
+
+"""
+This function will allow us to search for a specific value of our choosing, it will tell us the exact index value of where we are.
+It is similar to our sortList where it uses x to find what value we want. 
+
+"""
 
 def linearSearch():#the name of our function
     print("Where going to go through this list one item at a time")
@@ -142,6 +176,13 @@ def linearSearch():#the name of our function
             print("Your item is at index position {}".format (8))
             #this will tell us where the position is, we dont want it to search and not tell us anyting so this is here.
 
+"""
+The function recursiveBinarySearch uses many things that we havent learned before, like the code low, mid, and high. This allows the code find certain pieces
+of values at higher rates, you can think of this as cutting our list values into three sections and it finding values  between each section.
+"""
+
+
+
 def recursiveBinarySearch(unique_list, low, high, x):
     if high >= low:
         mid = (high + low) //2
@@ -154,6 +195,10 @@ def recursiveBinarySearch(unique_list, low, high, x):
             return recursiveBinarySearch(unique_list, mid+1, high, x)
     else:
         print("your number isn't here")
+"""
+The function iterativeBinarySearch is similar to the recurive function in that uses the same low, mid, high type of function, except this function
+makes finding certain values much easier and faster. It does this by rearranging certain pieces to find the values much much faster.
+"""
 
 
 def iterativeBinarySearch(unique_list, x):
@@ -177,6 +222,9 @@ def iterativeBinarySearch(unique_list, x):
     #print("Wow adding new emoji cool!")
     #newEmoji = input("Type what emoji you wantz")
     
+"""
+The emojiCreator function is 
+"""
 
 def emojiCreator():
     choice = input("which emoji you want boi?")
@@ -196,7 +244,7 @@ def emojiCreator():
     
 """
 Function Explanation: we created a variable called indexPos, and stored
-the resuolt of and in input function inside it.
+the result of and in input function inside it.
 
 We then force the value stored in the indexPos into an integer (using the int () function)
 and used that variable to call a value at a specific index position.
@@ -214,7 +262,8 @@ def indexValues():#the name of our function
     #we do a similar thing here but we just add a random.randint and try to search for a value inside the mylist we created.
 
 """
-
+This function will allow us to print our list.
+It will allow us to sort and unsort our list.
  
 
 """
